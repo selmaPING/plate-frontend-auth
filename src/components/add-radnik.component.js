@@ -6,6 +6,7 @@ export default class AddRadnik extends Component {
     super(props);
     this.onChangeIme = this.onChangeIme.bind(this);
     this.onChangePrezime = this.onChangePrezime.bind(this);
+    this.onChangeImeOca = this.onChangeImeOca.bind(this);
     this.saveRadnik = this.saveRadnik.bind(this);
     this.newRadnik = this.newRadnik.bind(this);
 
@@ -13,6 +14,7 @@ export default class AddRadnik extends Component {
       id: null,
       ime: "",
       prezime: "",
+      imeOca: "",
 
       submitted: false
     };
@@ -30,10 +32,17 @@ export default class AddRadnik extends Component {
     });
   }
 
+  onChangeImeOca(e) {
+    this.setState({
+     imeOca: e.target.value
+    });
+  }
+
   saveRadnik() {
     var data = {
       ime: this.state.ime,
-      prezime: this.state.prezime
+      prezime: this.state.prezime,
+      imeOca: this.state.imeOca
     };
 
     RadnikDataService.create(data)
@@ -42,6 +51,7 @@ export default class AddRadnik extends Component {
           id: response.data.id,
           ime: response.data.ime,
           prezime: response.data.prezime,
+          imeOca: response.data.imeOca,
 
           submitted: true
         });
@@ -57,6 +67,7 @@ export default class AddRadnik extends Component {
       id: null,
       ime: "",
       prezime: "",
+      imeOca: "",
 
       submitted: false
     });
@@ -75,7 +86,7 @@ export default class AddRadnik extends Component {
         ) : (
           <div>
             <div className="form-group">
-              <label htmlFor="title">Ime</label>
+              <label htmlFor="ime">Ime</label>
               <input
                 type="text"
                 className="form-control"
@@ -88,7 +99,7 @@ export default class AddRadnik extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="description">Prezime</label>
+              <label htmlFor="prezime">Prezime</label>
               <input
                 type="text"
                 className="form-control"
@@ -97,6 +108,19 @@ export default class AddRadnik extends Component {
                 value={this.state.prezime}
                 onChange={this.onChangePrezime}
                 name="prezime"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="imeOca">Ime oca</label>
+              <input
+                type="text"
+                className="form-control"
+                id="imeOca"
+                required
+                value={this.state.imeOca}
+                onChange={this.onChangeImeOca}
+                name="imeOca"
               />
             </div>
 

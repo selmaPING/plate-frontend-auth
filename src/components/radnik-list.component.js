@@ -34,13 +34,13 @@ export default class RadniciList extends Component {
 
   retrieveRadnici() {
     RadnikDataService.getAll()
-      .then(response => {
+      .then((response) => {
         this.setState({
           radnici: response.data
         });
         console.log(response.data);
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e);
       });
   }
@@ -62,11 +62,11 @@ export default class RadniciList extends Component {
 
   removeAllRadnici() {
     RadnikDataService.deleteAll()
-      .then(response => {
+      .then((response) => {
         console.log(response.data);
         this.refreshList();
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e);
       });
   }
@@ -78,13 +78,13 @@ export default class RadniciList extends Component {
     });
 
     RadnikDataService.findByTitle(this.state.searchIme)
-      .then(response => {
+      .then((response) => {
         this.setState({
           radnici: response.data
         });
         console.log(response.data);
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e);
       });
   }
@@ -155,6 +155,12 @@ export default class RadniciList extends Component {
                   <strong>Prezime:</strong>
                 </label>{" "}
                 {currentRadnik.prezime}
+              </div>
+              <div>
+                <label>
+                  <strong>Ime oca:</strong>
+                </label>{" "}
+                {currentRadnik.imeOca}
               </div>
 
               <Link

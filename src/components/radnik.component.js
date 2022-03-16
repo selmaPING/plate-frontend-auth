@@ -6,6 +6,8 @@ export default class Radnik extends Component {
     super(props);
     this.onChangeIme = this.onChangeIme.bind(this);
     this.onChangePrezime = this.onChangePrezime.bind(this);
+    this.onChangeImeOca = this.onChangeImeOca.bind(this);
+
     this.getRadnik = this.getRadnik.bind(this);
     this.updateRadnik = this.updateRadnik.bind(this);
     this.deleteRadnik = this.deleteRadnik.bind(this);
@@ -14,7 +16,8 @@ export default class Radnik extends Component {
       currentRadnik: {
         id: null,
         ime: "",
-        prezime: ""
+        prezime: "",
+        imeOca: ""
       },
       message: ""
     };
@@ -44,6 +47,17 @@ export default class Radnik extends Component {
       currentRadnik: {
         ...prevState.currentRadnik,
         prezime: prezime
+      }
+    }));
+  }
+
+  onChangeImeOca(e) {
+    const imeOca = e.target.value;
+
+    this.setState((prevState) => ({
+      currentRadnik: {
+        ...prevState.currentRadnik,
+        imeOca: imeOca
       }
     }));
   }
@@ -89,7 +103,7 @@ export default class Radnik extends Component {
   }
 
   render() {
-    const { currentRadnik} = this.state;
+    const { currentRadnik } = this.state;
 
     return (
       <div>
@@ -115,6 +129,16 @@ export default class Radnik extends Component {
                   id="prezime"
                   value={currentRadnik.prezime}
                   onChange={this.onChangePrezime}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="imeOca">Ime oca</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="imeOca"
+                  value={currentRadnik.imeOca}
+                  onChange={this.onChangeImeOca}
                 />
               </div>
             </form>
