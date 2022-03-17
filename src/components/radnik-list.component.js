@@ -146,6 +146,19 @@ export default class RadniciList extends Component {
               <h4>Radnik</h4>
               <div>
                 <label>
+                  <strong>JMB:</strong>
+                </label>{" "}
+                {currentRadnik.JMB}
+              </div>
+              <div>
+                <label>
+                  <strong>JMBG:</strong>
+                </label>{" "}
+                {currentRadnik.JMBG}
+              </div>
+
+              <div>
+                <label>
                   <strong>Ime:</strong>
                 </label>{" "}
                 {currentRadnik.ime}
@@ -162,7 +175,90 @@ export default class RadniciList extends Component {
                 </label>{" "}
                 {currentRadnik.imeOca}
               </div>
-
+              <div>
+                <label>
+                  <strong>Spol:</strong>
+                </label>{" "}
+                {currentRadnik.spol}
+              </div>
+              <div>
+                <label>
+                  <strong>Datum rođenja:</strong>
+                </label>{" "}
+                {currentRadnik.datumRodjenja}
+              </div>
+              <div>
+                <label>
+                  <strong>Mjesto rođenja:</strong>
+                </label>{" "}
+                {currentRadnik.mjestoRodjenja}
+              </div>
+              <div>
+                <label>
+                  <strong>Općina rođenja:</strong>
+                </label>{" "}
+                {currentRadnik.opcinaRodjenja}
+              </div>
+              <div>
+                <label>
+                  <strong>Država rođenja:</strong>
+                </label>{" "}
+                {currentRadnik.drzavaRodjenja}
+              </div>
+              <div>
+                <label>
+                  <strong>Općina stanovanja:</strong>
+                </label>{" "}
+                {currentRadnik.opcinaStanovanja}
+              </div>
+              <div>
+                <label>
+                  <strong>Mjesto stanovanja:</strong>
+                </label>{" "}
+                {currentRadnik.mjestoStanovanja}
+              </div>
+              <div>
+                <label>
+                  <strong>Ulica:</strong>
+                </label>{" "}
+                {currentRadnik.ulica}
+              </div>
+              <div>
+                <label>
+                  <strong>Broj ulice:</strong>
+                </label>{" "}
+                {currentRadnik.brojUlice}
+              </div>
+              <div>
+                <label>
+                  <strong>Neto osnovica:</strong>
+                </label>{" "}
+                {currentRadnik.netoOsnovica}
+              </div>
+              <div>
+                <label>
+                  <strong>Organizacijski dio:</strong>
+                </label>{" "}
+                {currentRadnik.orgDio}
+              </div>
+              <div>
+                <label>
+                  <strong>Organizacijska jedinica:</strong>
+                </label>{" "}
+                {currentRadnik.orgJedinica}
+              </div>
+              <div>
+                <label>
+                  <strong>Datum zaposlenja:</strong>
+                </label>{" "}
+                {currentRadnik.datumZaposlenja}
+              </div>
+              <div>
+                <label>
+                  <strong>Radno mjesto:</strong>
+                </label>{" "}
+                {currentRadnik.radnoMjesto}
+              </div>
               <Link
                 to={"/radnici/" + currentRadnik.id}
                 className="badge badge-warning"
