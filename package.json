@@ -12,9 +12,11 @@
     "express": "^4.17.3",
     "react": "^16.13.0",
     "react-app-polyfill": "^3.0.0",
+    "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
+    "react-validation": "^3.0.7",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.17"
   },

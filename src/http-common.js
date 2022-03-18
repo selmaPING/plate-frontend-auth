@@ -7,4 +7,5 @@ export default axios.create({
   }
 });
 
-/*"https://app-za-plate.herokuapp.com/api"*/
+/*"http://localhost:8081/api"*/
+/*https://app-za-plate.herokuapp.com*/
