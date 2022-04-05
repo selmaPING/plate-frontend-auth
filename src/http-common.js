@@ -8,4 +8,4 @@ export default axios.create({
 });
 
 /*"http://localhost:8081/api"*/
-/*https://app-za-plate.herokuapp.com*/
+/*https://app-za-plate.herokuapp.com or https://app-za-plate.herokuapp.com/api */
