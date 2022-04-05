@@ -360,7 +360,7 @@ export default class AddRadnik extends Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="opcinaRodjenja">OpĆina rođenja</label>
+              <label htmlFor="opcinaRodjenja">Općina rođenja</label>
               <input
                 type="text"
                 className="form-control"
